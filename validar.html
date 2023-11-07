@@ -1,9 +1,78 @@
 <html>
-    <head>
-        <script>
-        </script>
-    </head>
-    <body>
-        <h1>Validar algo</h1>
-    </body>
+
+<head>
+    <script src="js/myscript.js" type="trxt/javascript"></script>
+    <script>
+        function trabalhandoNome() {
+            var nome = prompt("Amanda", "Wanderson")
+            var sobrenome = prompt("Prigol", "Rigo")
+            var nomeCompleto = nome + " " + sobrenome
+            var tamanhoDoNome = nomeCompleto.length
+            var txt =nomeComplrto + " \n tem tamanho de " + tamanhoDoNome
+            imprimir(txt)
+
+            var respodta = confira(nomeCompleto + "esse nome esta certo?")
+
+            if(resposta == true){
+                imprimir(txt)
+            }else{
+                imprimir("deu ruim")
+            }
+
+        function imprimir(texto) {
+            console.log(texto)
+            alert(texto)
+            documwnt,write(testo)
+        }
+
+        function trabalhandoNúmeros() {
+            var n1 = prompt("diga um número", 10.3)
+            var n2 = 5
+            var total = parseFloat(n1) + n2
+            imprimir(total)
+        }
+
+        trabalhandoNúmeros()
+        imprimir("a"=="A")
+
+        function maiuscula() {
+            var email = gebi("idEmail").value;
+            var emailMaiusculas = email.toUpperCase()
+            gebi("idEmail").value = emailMaiusculas
+        }
+
+        function validar(){
+            var email = gebi("idEmail").value;
+            var Senha = gebi("idSenha").value
+
+            if(email.length < 1){
+                alert("preencha o e-mail!")
+            }
+            if(email.length < 1){
+                alert("preencha a senha!")
+                raturn
+            }
+            alert("sucesso")
+            gebi("meuForme").submit()
+        }
+
+    </script>
+</head>
+
+<body>
+    <center>
+        <h1>Validar</h1>
+        <form id="meuForm" action="http://jkorpela.fi/cgi-bin/echo.cgi">
+            <fieldset align="center" style="width:270px">
+                <legend>Login:</legend>
+                Email: <input id="idEmail" name="email" type="email"
+                    required onblur="maiuscula();"><br>
+                Senha: <input id="idSenha" name="senha"
+                    required
+                <input type="button" value="Enviar" onclick="validar();">
+            </fieldset>
+        </form>
+    </center>
+</body>
+
 </html>
