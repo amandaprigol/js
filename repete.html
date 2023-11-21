@@ -14,11 +14,33 @@
                     document,write(car + "<br>")
                 }
             }
+            function junina(){
+                var a = ["jose", "maria", "padre", "joana", "bento", "francisco"]
+
+                for (let index = 0; index < a.length; index++) {
+                    const element = a[index];
+
+                    if(element == "pastor"){
+                        document.write("casinha:" + index + "tem " + element + "<br>")
+                        break
+                    }
+                }
+
+                var quem = prompt("diga um nome")
+                var ondeEsta = a.indexOf(quem)
+                if(ondeEsta != -1){
+                    document.write("casinha:" + ondeEsta + "tem " + quem + "<br>")
+                    a.splice(ondeEsta,1)
+                }else{
+                    document.write("não achei:" + quem)
+                }
+                document.write(a)
+            }
         </script>
     </head>
     <body>
         <input type="button"
         value="Enviar"
-        onclick="contar()">
+        onclick="junina()">
     </body>
 </html>
