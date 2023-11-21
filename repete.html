@@ -4,7 +4,15 @@
         <title>titulo</title>
         <script>
             function contar(){
-                var cars = ["fusca", "gol", "opala" ];
+                var cars = ["fusca", "gol", "opala", 147];
+                document.write(cars + "<br>")
+                var novoCarro = prompt("diga um carro")
+                cars.push(novoCarro)
+
+                for (let index = 0; index < cars.length; index++) {
+                    const car = cars[index];
+                    document,write(car + "<br>")
+                }
             }
         </script>
     </head>
