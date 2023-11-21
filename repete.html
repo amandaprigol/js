@@ -3,6 +3,7 @@
     <head>
         <title>Título</title>
         <script>
+
             function contar(){
                 var cars = ["fusca", "gol", "opala", 147];
                 document.write(cars + "<br>")
@@ -11,17 +12,18 @@
 
                 for (let index = 0; index < cars.length; index++) {
                     const car = cars[index];
-                    document,write(car + "<br>")
+                    document.write(car + "<br>")
                 }
             }
+
             function junina(){
                 var a = ["jose", "maria", "padre", "joana", "bento", "francisco"]
 
-                for (let index = 0; index < a.length; index++) {
+                for (          let index = 0;                  index < 6;                 index++         ) {
                     const element = a[index];
 
                     if(element == "pastor"){
-                        document.write("casinha:" + index + "tem " + element + "<br>")
+                        document.write("casinha: " + index + " tem " + element + "<br>")
                         break
                     }
                 }
@@ -29,18 +31,29 @@
                 var quem = prompt("diga um nome")
                 var ondeEsta = a.indexOf(quem)
                 if(ondeEsta != -1){
-                    document.write("casinha:" + ondeEsta + "tem " + quem + "<br>")
+                    document.write("casinha: " + ondeEsta + " tem " + quem + "<br>")
                     a.splice(ondeEsta,1)
                 }else{
                     document.write("não achei:" + quem)
                 }
-                document.write(a)
+
+                document.write("alterado" + a)
+
             }
+
+           const numeroFornecido = parseInt(prompt("digite o limite:"));
+           const arrayvalores [];
+           for (let i = 0; i <= numeroFornecido; i++) {
+            arrayvalores.push(i);
+           }
+           document.write("original: "  +)
+              
+
         </script>
     </head>
     <body>
         <input type="button"
         value="Enviar"
-        onclick="junina()">
+        onclick="valor()">
     </body>
 </html>
