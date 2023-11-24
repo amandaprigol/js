@@ -1,59 +1,149 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Título</title>
-        <script>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 
-            function contar(){
-                var cars = ["fusca", "gol", "opala", 147];
-                document.write(cars + "<br>")
-                var novoCarro = prompt("diga um carro")
-                cars.push(novoCarro)
+    <script>
 
-                for (let index = 0; index < cars.length; index++) {
-                    const car = cars[index];
-                    document.write(car + "<br>")
+        function contar() {
+            var soma = 0
+            for (var i = 0; i < 1001; i++) {
+                document.write(i + "" + soma + "<br>")
+                soma = soma + i
+            }
+        }
+
+        function contarwhile() {
+            var n = 1;
+
+            while (n <= 10)
+            {
+                document.write(n);
+                document.write('<br>');
+                n = n + 1;
+            }
+        }
+
+        function regressiva() {
+            var n = 10;
+
+            while (n>=1)
+            {
+                document.write(n);
+                document.write("<br>")
+                n = n - 1;
+            }
+        }
+
+        function tabuada() {
+            var n = 0;
+
+            while (n<=50)
+            {
+                document.write(n);
+                document.write("<br>")
+                n = n + 5;
+            }
+        }
+
+        function ultrapassar() {
+            var n = 0
+            var soma = 0
+            while (n < 21) 
+            {
+                if((soma + n) > 101) {
+                    break
+                } else {
+                    soma = soma + n
                 }
+                n = n + 1
             }
 
-            function junina(){
-                var a = ["jose", "maria", "padre", "joana", "bento", "francisco"]
+            document.write("soma = " + soma)
+        }
 
-                for (          let index = 0;                  index < 6;                 index++         ) {
-                    const element = a[index];
+        function pares() {
+            var n = 0;
 
-                    if(element == "pastor"){
-                        document.write("casinha: " + index + " tem " + element + "<br>")
-                        break
-                    }
-                }
-
-                var quem = prompt("diga um nome")
-                var ondeEsta = a.indexOf(quem)
-                if(ondeEsta != -1){
-                    document.write("casinha: " + ondeEsta + " tem " + quem + "<br>")
-                    a.splice(ondeEsta,1)
-                }else{
-                    document.write("não achei:" + quem)
-                }
-
-                document.write("alterado" + a)
-
+            while (n <= 25)
+            {
+                document.write(n);
+                document.write("<br>");
+                n = n + 2;
             }
+        }
 
-           const numeroFornecido = parseInt(prompt("digite o limite:"));
-           const arrayvalores [];
-           for (let i = 0; i <= numeroFornecido; i++) {
-            arrayvalores.push(i);
+        function adivinhar() {
+
+            var numero = prompt("Adivinhe o número");
+            while (numero != 20) {
+                numero = prompt("Errou! Diga um numero");
+            }
+            alert("Acertou! Era 20 mesmo!")
+        }
+
+        function arranjos() {
+            var numeros = [9, 21, 7, 15];
+
+            var cars = ["BMW", "Volvo", "Saab", "Ford", "Fiat", "Audi", "Abobrinha"];
+
+           for (let i = 0; i < cars.length; i++) {
+            const element = cars[i];
+            document.write(element + "<br>")
            }
-           document.write("original: "  +)
-              
+        }
 
-        </script>
-    </head>
-    <body>
-        <input type="button"
-        value="Enviar"
-        onclick="valor()">
-    </body>
+        function junina() {
+            var a = ["jose", "maria", "padre", "joana", "bento", "francisco"]
+
+            for (let i = 0; i < a.length; i++) {
+                const element = a[i];
+
+                if(element == "pastor"){
+                    document.write("casinha:" + i + " tem " + element + "<br>")
+                    break
+                }
+            }
+
+            var quem = prompt("Diga um nome")
+            var ondeEsta = a.indexOf(quem)
+            if(ondeEsta != -1) {
+                document.write("casinha:" + ondeEsta + " tem " + quem)
+                a.splice(ondeEsta,1) // remove 1
+            } else {
+                document.write("não achei " + quem + "<br>")
+            }
+
+            console.table(a)
+
+        }
+        
+
+        function valor() {
+            n = prompt("Diga um número")
+            lista = []
+
+            for (let i = 0; i <= n; i++) {
+                lista.push(i)
+            }
+
+            document.write(lista + "<br>")
+
+            remover = prompt("Digite o número a ser removido:")
+            lista.splice(remover,1)
+
+            document.write(lista)
+        }
+
+        
+
+        
+    </script>
+
+</head>
+<body>
+    <input type="button" value="Enviar" onclick="valor()">
+</body>
 </html>
